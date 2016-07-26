@@ -22,11 +22,11 @@ angular.module("app", [])
         $scope.transcript.unshift({ speaker: speaker, time: time, text: $scope.text });
         $scope.text = "";
         time = moment().format("H:mm a, MMM. D");
-        console.log($scope.transcript);
       }
       else if( word.indexOf(":") != -1){
-        $scope.text = $scope.text + "<strong>" + sentence + word + "</strong> ";
-        sentence = ""
+        $scope.transcript.unshift({ speaker: speaker, time: time, text: $scope.text });
+        $scope.text = "<strong>" + sentence + word + "</strong> ";
+        time = moment().format("h:mm a, MMM. D");
       }
       else if( word.indexOf(".") != -1 || word.indexOf("?") != -1 || word.indexOf("!") != -1 ){
         sentence = sentence + data.data.body + " ";
