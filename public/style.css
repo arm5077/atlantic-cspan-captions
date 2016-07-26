@@ -1,0 +1,32 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700);
+
+body {
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+}
+
+.section {
+  width: 50%;
+  margin: 10px auto;
+  line-height: 1.4em;
+  padding: 15px 25px;
+  background-color: #eee;
+  border-radius: 10px;
+  min-width: 300px;
+}
+
+  .section .time {
+    font-size: 14px;
+    font-weight: bold;
+    color: #666
+  }
+  
+  .section .text {
+    font-size: 18px;
+  }
+
+.rightNow {
+  font-size: 25px;
+  width: 60%;
+  margin: 20px auto 30px;
+}

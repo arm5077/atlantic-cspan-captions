@@ -4,15 +4,27 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<!-- D3.js -->
+	<!-- angular -->
 	<script src="bower_components/angular/angular.min.js"></script>
 	
+	<!-- moment.js -->
+	<script src="bower_components/moment/moment.js"></script>
+
 	<!-- Socket.io -->
 	<script src="socket.io/socket.io.js"></script>
 	
+	<link rel="stylesheet" href="style.css" />
+	
 </head>
 <body ng-controller="controller">
- {{words}}
+
+	<div class="rightNow" ng-bind-html="renderHTML(text)"></div>
+
+	<div ng-repeat="section in transcript track by $index" class="section">
+		<div class="time">{{section.time}}</div>
+		<div class="text" ng-bind-html="renderHTML(section.text)"></div>
+	</div>
+	
 </body>
 
 <!-- My scripts -->
